@@ -304,7 +304,7 @@ footer .soc svg{width:20px;height:20px}
         </div>
       </div>
       <aside class="info" aria-label="Today at a glance">
-        <div class="open"><span class="dot" id="open-dot"></span><span id="open-text">Open every day, 8 AM – midnight</span></div>
+        <div class="open"><span class="dot" id="open-dot"></span><span id="open-text">Mon–Fri 8 AM · Sat–Sun 9 AM · until midnight</span></div>
         <dl>
           <dt>Day pass</dt><dd>500 EGP · $10</dd>
           <dt>Internet</dt><dd>70 Mbps+ with backup</dd>
@@ -452,7 +452,7 @@ footer .soc svg{width:20px;height:20px}
       </div>
       <div>
         <details><summary>Do I need to book a desk?</summary><p>No. Walk in during opening hours, pay for a pass, and take any free desk.</p></details>
-        <details><summary>What are the opening hours?</summary><p>Every day from 8 AM to midnight. Passes cover the hours we're open.</p></details>
+        <details><summary>What are the opening hours?</summary><p>Monday to Friday from 8 AM to midnight, and Saturday and Sunday from 9 AM to midnight. Passes cover the hours we're open.</p></details>
         <details><summary>How do I pay?</summary><p>Cash or InstaPay at the desk. Prices are in Egyptian pounds or US dollars.</p></details>
         <details><summary>Where can I take calls?</summary><p>Use the private meeting room. It fits one person and is free for members. Book a slot online.</p></details>
         <details><summary>Is the internet reliable?</summary><p>Our main line gives at least 70 Mbps, and a second landline takes over if it drops.</p></details>
@@ -469,7 +469,7 @@ footer .soc svg{width:20px;height:20px}
         <p class="addr">Blue Beach Hotel, Lighthouse, Dahab, South Sinai</p>
         <p class="lead">A short walk from the Lighthouse and Asala.</p>
         <div>
-          <div class="rowline"><span>Hours</span><span>Every day, 8 AM – midnight</span></div>
+          <div class="rowline"><span>Hours</span><span>Mon–Fri 8 AM – midnight · Sat–Sun 9 AM – midnight</span></div>
           <div class="rowline"><span>WhatsApp</span><span>+20 106 391 0070</span></div>
           <div class="rowline"><span>Email</span><span style="overflow-wrap:anywhere">elcoworkingdahab@gmail.com</span></div>
         </div>
@@ -518,10 +518,13 @@ footer .soc svg{width:20px;height:20px}
 
   // open now (Cairo time)
   try{
-    var h=Number(new Intl.DateTimeFormat('en-GB',{hour:'numeric',hour12:false,timeZone:'Africa/Cairo'}).format(new Date()));
-    var open=h>=8 && h<24;
+      var now=new Date();
+    var h=Number(new Intl.DateTimeFormat('en-GB',{hour:'numeric',hour12:false,timeZone:'Africa/Cairo'}).format(now));
+    var wd=new Intl.DateTimeFormat('en-GB',{weekday:'short',timeZone:'Africa/Cairo'}).format(now);
+    var openAt=(wd==='Sat'||wd==='Sun')?9:8;
+    var open=h>=openAt && h<24;
     document.getElementById('open-dot').classList.toggle('off',!open);
-    document.getElementById('open-text').textContent = open ? 'Open now · until midnight' : 'Closed now · opens 8 AM';
+    document.getElementById('open-text').textContent = open ? 'Open now · until midnight' : 'Closed now · opens '+openAt+' AM';
   }catch(e){}
 
   // currency
