@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Co-working Space Dahab</title>
+<meta name="description" content="Coworking space by the Lighthouse in Dahab, South Sinai. Fast internet with backup, reliable power, air conditioning and coffee included. Passes from 250 EGP.">
+<meta property="og:title" content="El Co-working Space Dahab">
+<meta property="og:description" content="Coworking space by the Lighthouse in Dahab, South Sinai. Fast internet with backup, reliable power, air conditioning and coffee included. Passes from 250 EGP.">
+<meta property="og:image" content="https://elcoworkingdahab-sketch.github.io/hall.jpg">
+<meta property="og:url" content="https://elcoworkingdahab-sketch.github.io/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F5F0E6">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: photo-led like WeWork / Impact Hub — full-bleed hero with a floating info card and the round badge as a stamp, then alternating photo/text rows, pass cards, a photo gallery, events, FAQ and a location band. */
+:root{
+  --cream:#F5F0E6; --peach:#FFEAD3; --sand:#C8B48A; --gold:#E5CD82; --sage:#7F8C6A;
+  --bg:#F5F0E6; --surface:#FFFFFF; --soft:#FFEAD3; --fg:#2B2219; --muted:#6B5B48;
+  --accent:#7F8C6A; --accent-ink:#56613F; --on-accent:#FFFFFF; --line:#E6DAC2; --chip:#F0E6D2;
+  --dark:#2B2219; --on-dark:#F5F0E6; --band:#E9DBBF; --shadow:0 18px 40px -22px rgba(60,40,20,.45);
+  --logo-filter:none; --sand-soft:#EFE3CC; color-scheme:light;
+  --font:"Plus Jakarta Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.6}
+.pad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1200px;margin:0 auto}
+a{color:inherit}
+img{display:block}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.02em;line-height:1.08}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:800}
+p{margin:0}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:6px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.kicker::before{content:"";width:22px;height:2px;background:var(--gold)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;font-size:.98rem;text-decoration:none;border:0;cursor:pointer;font-family:var(--font);transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-accent{background:var(--accent);color:var(--on-accent);box-shadow:var(--shadow)}
+.btn-gold{background:var(--gold);color:#2B2219}
+.btn-ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px var(--fg)}
+.btn-light{background:rgba(255,255,255,.14);color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7);backdrop-filter:blur(6px)}
+.btn svg{width:20px;height:20px;flex:none}
+section{padding-block:clamp(64px,9vw,120px)}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{line-height:0}
+.brand img{height:54px;width:auto;filter:var(--logo-filter)}
+.menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:.95rem}
+.menu a{text-decoration:none;color:var(--muted)}
+.menu a:hover{color:var(--fg)}
+.menu .btn{color:var(--on-accent);min-height:42px;padding:0 18px}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;align-items:center;justify-content:center}
+.burger svg{width:22px;height:22px}
+
+/* hero */
+.hero{position:relative;min-height:min(86vh,780px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding-block:0}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:drift 18s ease-out forwards}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,18,10,.15) 0%,rgba(25,18,10,.25) 40%,rgba(25,18,10,.82) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1232px;margin:0 auto;padding-block:clamp(120px,18vh,200px) clamp(40px,6vw,72px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;align-items:end}
+.hero .kicker{color:var(--gold)}
+.hero h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:800;margin:14px 0 18px;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.sub{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:44ch;opacity:.92}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.info{background:var(--surface);color:var(--fg);border-radius:20px;padding:22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);display:grid;gap:14px;justify-self:end;width:100%;max-width:360px}
+.info .open{display:flex;align-items:center;gap:8px;font-weight:700}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px color-mix(in srgb,var(--sage) 30%,transparent)}
+.dot.off{background:#B5673F;box-shadow:0 0 0 4px rgba(181,103,63,.25)}
+.info dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.93rem}
+.info dt{color:var(--muted)}
+.info dd{margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.stamp{position:absolute;z-index:3;right:max(24px,env(safe-area-inset-right,0px));top:96px;width:150px;height:150px;border-radius:50%;box-shadow:0 20px 40px -18px rgba(0,0,0,.7);animation:spin 40s linear infinite}
+@keyframes drift{to{transform:scale(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* perks strip */
+.perks{background:var(--gold);color:var(--fg);padding-block:22px}
+.perks ul{list-style:none;margin:0 auto;padding:0;display:flex;justify-content:space-between;gap:18px 28px;flex-wrap:wrap}
+.perks li{display:flex;align-items:center;gap:10px;font-weight:600;font-size:.95rem}
+.perks svg{width:22px;height:22px;color:var(--accent-ink);flex:none}
+
+/* rows */
+.rows{display:grid;gap:clamp(56px,8vw,104px);margin-top:clamp(36px,5vw,56px)}
+.row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.row.flip .media{order:2}
+.media{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);max-width:100%}
+.media img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.media:hover img{transform:scale(1.04)}
+.media .pill{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--fg);border-radius:999px;padding:8px 14px;font-weight:700;font-size:.85rem}
+.copy{display:grid;gap:16px;align-content:center}
+.copy h3{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800}
+.ticks{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232B2219' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+
+/* passes */
+.passes-sec{background:var(--soft)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.head>div{display:grid;gap:12px}
+.toggle{display:inline-flex;background:var(--surface);border-radius:999px;padding:4px;box-shadow:inset 0 0 0 1px var(--line)}
+.toggle button{border:0;background:none;color:var(--fg);font:700 .9rem var(--font);padding:10px 18px;border-radius:999px;cursor:pointer;min-height:42px}
+.toggle button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:40px}
+.card{background:var(--surface);border-radius:20px;padding:24px 22px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--line);transition:transform .25s,box-shadow .25s;min-width:0}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card h3{font-size:1.15rem;font-weight:800}
+.card .amt{font-size:2rem;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.card .amt small{display:block;font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:0;margin-top:6px}
+.card ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.92rem;color:var(--muted)}
+.card ul li::before{content:"• ";color:var(--sage);font-weight:800}
+.card .btn{margin-top:auto;min-height:44px;font-size:.9rem}
+.card.best{background:var(--dark);color:var(--on-dark);border-color:var(--dark);position:relative}
+.card.best ul,.card.best .amt small{color:#E3D7C0}
+.card.best .badge{position:absolute;top:-12px;left:22px;background:var(--gold);color:#2B2219;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.fine{margin-top:22px;color:var(--muted);font-size:.95rem;display:flex;gap:10px 24px;flex-wrap:wrap}
+.fine b{color:var(--fg)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:12px;margin-top:40px}
+.gallery button{all:unset;cursor:zoom-in;border-radius:16px;overflow:hidden;position:relative}
+.gallery button:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.gallery button:hover img{transform:scale(1.06)}
+.g-wide{grid-column:span 2}.g-tall{grid-row:span 2}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(15,10,6,.92);display:flex;align-items:center;justify-content:center;padding:calc(56px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(56px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb img{max-width:100%;max-height:100%;border-radius:12px;object-fit:contain}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.4rem;cursor:pointer}
+.lb .x{top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px))}
+.lb .prev{left:max(12px,env(safe-area-inset-left,0px))}.lb .next{right:max(12px,env(safe-area-inset-right,0px))}
+
+/* amenities */
+.amen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+.am{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:10px;align-content:start}
+.am .ic{width:46px;height:46px;border-radius:14px;background:var(--chip);display:grid;place-items:center;color:var(--accent-ink)}
+.am .ic svg{width:24px;height:24px}
+.am h3{font-size:1.05rem;font-weight:700;letter-spacing:-.01em}
+.am p{color:var(--muted);font-size:.93rem}
+.am a{font-weight:700;color:var(--accent-ink)}
+
+/* events */
+.ev-sec{background:var(--band);color:var(--fg)}
+.ev-sec .lead{color:var(--muted)}
+.ev-sec .kicker{color:var(--accent-ink)}
+.ev-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,64px);margin-top:40px;align-items:start}
+.ev-list{display:grid;gap:12px}
+.ev{display:grid;grid-template-columns:68px minmax(0,1fr);gap:16px;align-items:center;background:var(--cream);border:1px solid var(--sand);border-radius:16px;padding:14px}
+.ev .d{background:var(--gold);color:#2B2219;border-radius:12px;text-align:center;padding:8px 0;font-weight:700;font-size:.75rem;letter-spacing:.08em;line-height:1.2}
+.ev .d b{display:block;font-size:1.6rem;letter-spacing:-.02em}
+.ev h3{font-size:1.05rem;font-weight:700;letter-spacing:-.01em}
+.ev p{color:var(--muted);font-size:.9rem}
+.ev-empty{background:var(--cream);border:1px dashed var(--sand);border-radius:16px;padding:20px;color:var(--muted)}
+.ev .who{font-size:.85rem;color:var(--accent-ink);font-weight:600;margin-top:2px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.ex{font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--muted);color:var(--muted);padding:1px 6px;border-radius:6px;margin-left:6px;vertical-align:2px}
+form{background:var(--surface);color:var(--fg);border-radius:22px;padding:clamp(20px,3vw,32px);display:grid;gap:14px}
+form h3{font-size:1.4rem;font-weight:800}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+label{display:grid;gap:6px;font-size:.88rem;font-weight:600}
+input,textarea{font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%;min-width:0;min-height:48px}
+input:focus,textarea:focus{border-color:var(--accent);outline:none}
+textarea{min-height:100px;resize:vertical}
+.note{font-size:.85rem;color:var(--muted)}
+.msg{border-radius:12px;padding:12px 14px;font-size:.93rem;background:var(--chip)}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px)}
+.faq-grid .side{display:grid;gap:16px;align-content:start}
+.faq-grid .side img{width:200px;max-width:100%;border-radius:50%;margin-top:12px}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;font-weight:700;font-size:1.05rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;font-weight:400;color:var(--accent-ink);transition:transform .25s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 20px;color:var(--muted);max-width:60ch}
+
+/* visit */
+.visit{background:var(--sand-soft)}
+.v-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,56px);align-items:stretch}
+.v-photo{border-radius:24px;overflow:hidden;min-height:340px;position:relative}
+.v-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.v-card{background:var(--surface);border-radius:24px;padding:clamp(24px,4vw,40px);display:grid;gap:18px;align-content:start}
+.v-card .addr{font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.rowline{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.rowline span:first-child{color:var(--muted)}
+.rowline span:last-child{font-weight:600}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.soc{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--fg);color:var(--bg);text-decoration:none;transition:transform .2s,background .2s}
+.soc:hover{transform:translateY(-3px);background:var(--accent);color:var(--on-accent)}
+.soc svg{width:24px;height:24px}
+
+footer{background:var(--sand);color:var(--fg);padding-block:48px 40px}
+.f-in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.f-brand{display:flex;align-items:center;gap:16px}
+.f-brand img{width:72px;height:72px;border-radius:50%}
+.f-brand b{display:block;color:var(--fg);font-size:1.05rem}
+footer .soc{background:var(--fg);color:var(--cream);width:46px;height:46px}
+footer .soc svg{width:20px;height:20px}
+
+.mbar{display:none}
+
+@media (max-width:1000px){
+  .cards{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,72%);overflow-x:auto;scroll-snap-type:x mandatory;padding:14px 4px 18px;margin-inline:-4px;scrollbar-width:thin}
+  .card{scroll-snap-align:start}
+  .amen{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stamp{width:110px;height:110px;top:88px}
+}
+@media (max-width:860px){
+  .menu{display:none;position:absolute;left:0;right:0;top:72px;background:var(--bg);flex-direction:column;align-items:stretch;gap:0;padding:8px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  .menu.open{display:flex}
+  .menu a{padding:14px 4px;border-bottom:1px solid var(--line);font-size:1.05rem;color:var(--fg)}
+  .menu .btn{margin-top:14px;border-bottom:0;min-height:50px}
+  .burger{display:inline-flex}
+  .hero-in{grid-template-columns:minmax(0,1fr)}
+  .info{justify-self:stretch;max-width:none}
+  .row,.ev-grid,.faq-grid,.v-grid{grid-template-columns:minmax(0,1fr)}
+  .row.flip .media{order:0}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}
+  .faq-grid .side img{width:140px}
+}
+@media (max-width:560px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+    padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .mbar .btn{padding:0 12px;font-size:.93rem}
+  .brand img{height:46px}
+  .hero{min-height:auto}
+  .hero-in{padding-block:150px 28px}
+  .hero .ctas .btn{flex:1 1 100%}
+  .stamp{width:92px;height:92px;top:84px;right:16px}
+  .perks ul{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .amen{grid-template-columns:minmax(0,1fr)}
+  .two{grid-template-columns:minmax(0,1fr)}
+  .gallery{grid-auto-rows:130px;gap:8px}
+  .g-tall{grid-row:span 1}
+  .media{border-radius:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5a9.4 9.4 0 0 0-8.1 14.2L2.6 21.5l4.9-1.3A9.4 9.4 0 1 0 12 2.5zm0 17.2a7.8 7.8 0 0 1-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A7.8 7.8 0 1 1 12 19.7zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.4 6.4 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 16a5 5 0 0 1 6.8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="19.2" r="1.4" fill="currentColor"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4 7l16 10M4 17 20 7M9 3.5l3 2 3-2M9 20.5l3-2 3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 2.5c-.8 1 .8 2-0 3M12 2.5c-.8 1 .8 2 0 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><path d="M3 9h18M5 9v11M19 9v11M14 9v6h5M7 9V5h6v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M3 21h18M14.5 12.5h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM6 19v2M18 19v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-plant" viewBox="0 0 24 24"><path d="M12 21v-9M12 12c0-4 3-7 8-7 0 4-3 7-8 7zM12 15c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5zM7 21h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top pad">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="El Co-working Space Dahab, home"><img src="logo.png" alt="El Co-working Space Dahab" width="388" height="342"></a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#space">The space</a>
+      <a href="#passes">Passes</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#events">Events</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-accent" href="https://wa.me/201063910070" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp us</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <img src="hall.jpg" alt="Rows of wooden desks and ergonomic chairs under a timber roof, with a lounge and garden beyond the glass" fetchpriority="high">
+    <div class="hero-in pad">
+      <div class="wrap" style="width:100%;max-width:none;margin:0">
+        <span class="kicker">Coworking by the Lighthouse · Dahab</span>
+        <h1>Focus. Create.<br><em>Connect.</em></h1>
+        <p class="sub">A bright, quiet workspace under a timber roof, steps from the Red Sea. Fast internet, steady power and coffee on the house.</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="#passes">See passes</a>
+          <a class="btn btn-light" href="https://wa.me/201063910070" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Ask on WhatsApp</a>
+        </div>
+      </div>
+      <aside class="info" aria-label="Today at a glance">
+        <div class="open"><span class="dot" id="open-dot"></span><span id="open-text">Open every day, 8 AM – midnight</span></div>
+        <dl>
+          <dt>Day pass</dt><dd>500 EGP · $10</dd>
+          <dt>Internet</dt><dd>70 Mbps+ with backup</dd>
+          <dt>Desks</dt><dd>20</dd>
+          <dt>Pay with</dt><dd>Cash or InstaPay</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+
+  <div class="perks pad">
+    <ul class="wrap">
+      <li><svg><use href="#i-wifi"/></svg>70 Mbps minimum</li>
+      <li><svg><use href="#i-wifi"/></svg>Backup landline</li>
+      <li><svg><use href="#i-bolt"/></svg>Reliable power</li>
+      <li><svg><use href="#i-snow"/></svg>Air conditioning</li>
+      <li><svg><use href="#i-cup"/></svg>Coffee or juice included</li>
+    </ul>
+  </div>
+
+  <section id="space" class="pad">
+    <div class="wrap">
+      <span class="kicker">The space</span>
+      <h2 style="margin-top:14px;max-width:18ch">Made for remote workers from everywhere</h2>
+      <div class="rows">
+        <div class="row">
+          <div class="media"><img src="garden-row.jpg" alt="A long wooden desk along the windows with bamboo blinds, small plants and white chairs" loading="lazy"><span class="pill">Window desks</span></div>
+          <div class="copy">
+            <h3>A desk with daylight and green views</h3>
+            <p class="lead">Pick a window seat by the garden or one of the wooden desks in the main hall. Walk in, pick a free desk, and start working.</p>
+            <ul class="ticks"><li>20 desks with power at every seat</li><li>Ergonomic chairs with head and arm rests</li><li>Quiet working atmosphere all day</li></ul>
+          </div>
+        </div>
+        <div class="row flip">
+          <div class="media"><img src="lounge.jpg" alt="A lounge with beige sofas, colourful bean bags and a palm tree under the wooden roof" loading="lazy"><span class="pill">Lounge</span></div>
+          <div class="copy">
+            <h3>Room to breathe between tasks</h3>
+            <p class="lead">Take a break on the sofas or bean bags, grab a coffee, and meet people who work from Dahab like you.</p>
+            <ul class="ticks"><li>Coffee or juice and water with every day pass and up</li><li>Tea with the 4-hour pass</li><li>Members from many countries</li></ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="media"><img src="laptop.jpg" alt="A laptop on a wooden high table between potted plants" loading="lazy"><span class="pill">Meeting room</span></div>
+          <div class="copy">
+            <h3>A private room for your calls</h3>
+            <p class="lead">Our meeting room fits one person, so you can take calls and online meetings in peace. It's free for members. Book a slot of 30 to 120 minutes.</p>
+            <div><a class="btn btn-accent" href="https://script.google.com/macros/s/AKfycbwA-pGb3N6ZsjO7IFyrvdKc6GVIYd17_F7j9WKTY51zXDchTisKh6bl8V6vmf3Ea1pe/exec" target="_blank" rel="noopener">Book the meeting room</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="passes" class="passes-sec pad">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="kicker">Passes</span>
+          <h2>Stay for an afternoon or a month</h2>
+          <p class="lead">Every pass gives you a desk whenever we're open.</p>
+        </div>
+        <div class="toggle" role="group" aria-label="Show prices in">
+          <button type="button" id="cur-egp" data-cur="egp" aria-pressed="true">EGP</button>
+          <button type="button" id="cur-usd" data-cur="usd" aria-pressed="false">USD</button>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="card"><h3>4 hours</h3><div class="amt" data-egp="250" data-usd="5"></div><ul><li>Any free desk</li><li>Tea included</li></ul><a class="btn btn-ghost" href="https://wa.me/201063910070" target="_blank" rel="noopener">Get this pass</a></article>
+        <article class="card"><h3>Day</h3><div class="amt" data-egp="500" data-usd="10"></div><ul><li>Any free desk</li><li>Coffee or juice + water</li></ul><a class="btn btn-ghost" href="https://wa.me/201063910070" target="_blank" rel="noopener">Get this pass</a></article>
+        <article class="card"><h3>Week</h3><div class="amt" data-egp="2250" data-usd="45"></div><ul><li>7 days of access</li><li>Coffee or juice + water daily</li></ul><a class="btn btn-ghost" href="https://wa.me/201063910070" target="_blank" rel="noopener">Get this pass</a></article>
+        <article class="card"><h3>2 weeks</h3><div class="amt" data-egp="4250" data-usd="80"></div><ul><li>14 days of access</li><li>Coffee or juice + water daily</li></ul><a class="btn btn-ghost" href="https://wa.me/201063910070" target="_blank" rel="noopener">Get this pass</a></article>
+        <article class="card best"><span class="badge">Best value</span><h3>Month</h3><div class="amt" data-egp="8000" data-usd="150"></div><ul><li>A full month of access</li><li>Coffee or juice + water daily</li></ul><a class="btn btn-gold" href="https://wa.me/201063910070" target="_blank" rel="noopener">Get this pass</a></article>
+      </div>
+      <div class="fine"><span>Pay at the desk with <b>cash</b> or <b>InstaPay</b></span><span>Extra monitor: <b>100 EGP a day</b> (2 available)</span><span>Meeting room: <b>free for members</b></span></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="pad">
+    <div class="wrap">
+      <span class="kicker">Gallery</span>
+      <h2 style="margin-top:14px">Take a look around</h2>
+      <div class="gallery" id="gal">
+        <button class="g-wide g-tall" type="button" data-i="0"><img src="stone-wall.jpg" alt="Desks with ergonomic chairs beside a stone wall and hanging plants" loading="lazy"></button>
+        <button type="button" data-i="1"><img src="window-desks.jpg" alt="White chairs at a long window desk with bamboo blinds" loading="lazy"></button>
+        <button class="g-tall" type="button" data-i="2"><img src="long-table.jpg" alt="A long wooden table with bean bags and glass walls to the garden" loading="lazy"></button>
+        <button type="button" data-i="3"><img src="desks-lounge.jpg" alt="Wooden desks and black office chairs next to the lounge" loading="lazy"></button>
+        <button class="g-wide" type="button" data-i="4"><img src="evening.jpg" alt="The workspace in late afternoon light with sofas and a palm" loading="lazy"></button>
+        <button class="g-wide" type="button" data-i="5"><img src="hall.jpg" alt="The main hall with rows of desks under the timber roof" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" style="padding-top:0">
+    <div class="wrap">
+      <span class="kicker">Everything you need</span>
+      <h2 style="margin-top:14px">Amenities</h2>
+      <div class="amen">
+        <div class="am"><div class="ic"><svg><use href="#i-wifi"/></svg></div><h3>Fast, backed-up internet</h3><p>70 Mbps minimum, with a second landline if the main one drops.</p></div>
+        <div class="am"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3>Reliable power</h3><p>Power at every desk, and it doesn't cut out.</p></div>
+        <div class="am"><div class="ic"><svg><use href="#i-snow"/></svg></div><h3>Air conditioning</h3><p>Stay cool through the Sinai summer.</p></div>
+        <div class="am"><div class="ic"><svg><use href="#i-cup"/></svg></div><h3>Coffee and drinks</h3><p>Coffee or juice and water included. Tea with the 4-hour pass.</p></div>
+        <div class="am"><div class="ic"><svg><use href="#i-door"/></svg></div><h3>Meeting room</h3><p>A private room for one, free to book.</p><a href="https://script.google.com/macros/s/AKfycbwA-pGb3N6ZsjO7IFyrvdKc6GVIYd17_F7j9WKTY51zXDchTisKh6bl8V6vmf3Ea1pe/exec" target="_blank" rel="noopener">Book a slot →</a></div>
+        <div class="am"><div class="ic"><svg><use href="#i-screen"/></svg></div><h3>Extra monitors</h3><p>Two screens to rent at 100 EGP a day.</p></div>
+        <div class="am"><div class="ic"><svg><use href="#i-print"/></svg></div><h3>Printer</h3><p>Print documents on site.</p></div>
+        <div class="am"><div class="ic"><svg><use href="#i-sofa"/></svg></div><h3>Lounge</h3><p>Sofas and bean bags for a break.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="ev-sec pad">
+    <div class="wrap">
+      <span class="kicker">Events</span>
+      <h2 style="margin-top:14px">Host something with the community</h2>
+      <p class="lead" style="margin-top:14px">Members can propose a talk, workshop or meetup. Once the manager approves it, it appears here.</p>
+      <div class="ev-grid">
+        <div class="ev-list" id="ev-list" aria-live="polite"><p class="ev-empty">Loading events…</p></div>
+        <form id="event-form" novalidate>
+          <h3>Propose an event</h3>
+          <p class="note">For current members only. We'll reply on WhatsApp.</p>
+          <div class="two">
+            <label for="ev-name">Your name<input id="ev-name" name="name" autocomplete="name" required></label>
+            <label for="ev-wa">WhatsApp number<input id="ev-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+20…" required></label>
+          </div>
+          <label for="ev-email">Email<input id="ev-email" name="email" type="email" autocomplete="email" required></label>
+          <label for="ev-title">Event name<input id="ev-title" name="title" required></label>
+          <div class="two">
+            <label for="ev-date">Date<input id="ev-date" name="date" type="date" required></label>
+            <label for="ev-time">Time<input id="ev-time" name="time" type="time" required></label>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="ev-website">Website<input id="ev-website" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label for="ev-desc">What's it about?<textarea id="ev-desc" name="description" required></textarea></label>
+          <button class="btn btn-accent" type="submit" id="ev-send">Send for approval</button>
+          <div class="msg" id="ev-msg" hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap faq-grid">
+      <div class="side">
+        <span class="kicker">Questions</span>
+        <h2>Good to know</h2>
+        <p class="lead">Can't find your answer? Message us on WhatsApp.</p>
+      </div>
+      <div>
+        <details><summary>Do I need to book a desk?</summary><p>No. Walk in during opening hours, pay for a pass, and take any free desk.</p></details>
+        <details><summary>What are the opening hours?</summary><p>Every day from 8 AM to midnight. Passes cover the hours we're open.</p></details>
+        <details><summary>How do I pay?</summary><p>Cash or InstaPay at the desk. Prices are in Egyptian pounds or US dollars.</p></details>
+        <details><summary>Where can I take calls?</summary><p>Use the private meeting room. It fits one person and is free for members. Book a slot online.</p></details>
+        <details><summary>Is the internet reliable?</summary><p>Our main line gives at least 70 Mbps, and a second landline takes over if it drops.</p></details>
+        <details><summary>Can I rent a monitor?</summary><p>Yes. We have two monitors at 100 EGP a day each. Ask at the desk.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit pad">
+    <div class="wrap v-grid">
+      <div class="v-photo"><img src="desks-lounge.jpg" alt="Wooden desks and black office chairs in the sunlit hall" loading="lazy"></div>
+      <div class="v-card">
+        <span class="kicker">Visit us</span>
+        <p class="addr">Blue Beach Hotel, Lighthouse, Dahab, South Sinai</p>
+        <p class="lead">A short walk from the Lighthouse and Asala.</p>
+        <div>
+          <div class="rowline"><span>Hours</span><span>Every day, 8 AM – midnight</span></div>
+          <div class="rowline"><span>WhatsApp</span><span>+20 106 391 0070</span></div>
+          <div class="rowline"><span>Email</span><span style="overflow-wrap:anywhere">elcoworkingdahab@gmail.com</span></div>
+        </div>
+        <div class="socials" aria-label="Find us online">
+          <a class="soc" href="https://wa.me/201063910070" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+          <a class="soc" href="https://www.instagram.com/elcoworkingspacedahab/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a class="soc" href="https://www.facebook.com/Elcoworkingspacedahab/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a class="soc" href="https://www.google.com/maps/place/El+Coworking+space+Dahab/@28.5024028,34.5187859,18z" target="_blank" rel="noopener" aria-label="Google Maps" title="Google Maps"><svg><use href="#i-map"/></svg></a>
+          <a class="soc" href="mailto:elcoworkingdahab@gmail.com" aria-label="Email" title="Email"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pad">
+  <div class="wrap f-in">
+    <div class="f-brand"><img src="logo.png" alt="" width="82" height="72" style="width:82px;height:72px;border-radius:0"><div><b>El Co-working Space Dahab</b>Focus. Create. Connect.</div></div>
+    <div class="socials">
+      <a class="soc" href="https://www.instagram.com/elcoworkingspacedahab/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Elcoworkingspacedahab/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+      <a class="soc" href="https://wa.me/201063910070" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+      <a class="soc" href="https://www.google.com/maps/place/El+Coworking+space+Dahab/@28.5024028,34.5187859,18z" target="_blank" rel="noopener" aria-label="Google Maps"><svg><use href="#i-map"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-accent" href="https://wa.me/201063910070" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+  <a class="btn btn-ghost" href="https://script.google.com/macros/s/AKfycbwA-pGb3N6ZsjO7IFyrvdKc6GVIYd17_F7j9WKTY51zXDchTisKh6bl8V6vmf3Ea1pe/exec" target="_blank" rel="noopener">Book the room</a>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <img id="lb-img" alt="">
+  <button class="x" type="button" aria-label="Close">×</button>
+  <button class="prev" type="button" aria-label="Previous photo">‹</button>
+  <button class="next" type="button" aria-label="Next photo">›</button>
+</div>
+
+<script>
+(function(){
+  // menu
+  var b=document.getElementById('burger'), m=document.getElementById('menu');
+  b.addEventListener('click',function(){ var o=m.classList.toggle('open'); b.setAttribute('aria-expanded',o); });
+  m.addEventListener('click',function(e){ if(e.target.closest('a')){ m.classList.remove('open'); b.setAttribute('aria-expanded',false); }});
+
+  // open now (Cairo time)
+  try{
+    var h=Number(new Intl.DateTimeFormat('en-GB',{hour:'numeric',hour12:false,timeZone:'Africa/Cairo'}).format(new Date()));
+    var open=h>=8 && h<24;
+    document.getElementById('open-dot').classList.toggle('off',!open);
+    document.getElementById('open-text').textContent = open ? 'Open now · until midnight' : 'Closed now · opens 8 AM';
+  }catch(e){}
+
+  // currency
+  function setCur(c){
+    document.querySelectorAll('.amt').forEach(function(el){
+      var v=el.dataset[c];
+      el.innerHTML=(c==='usd'?'$'+v:Number(v).toLocaleString('en-US')+' EGP')+'<small>'+(c==='usd'?'US dollars':'Egyptian pounds')+'</small>';
+    });
+    document.querySelectorAll('.toggle button').forEach(function(x){ x.setAttribute('aria-pressed',x.dataset.cur===c); });
+    try{ localStorage.setItem('elco-cur',c); }catch(e){}
+  }
+  var s='egp'; try{ s=localStorage.getItem('elco-cur')||'egp'; }catch(e){}
+  setCur(s==='usd'?'usd':'egp');
+  document.querySelectorAll('.toggle button').forEach(function(x){ x.addEventListener('click',function(){ setCur(x.dataset.cur); }); });
+
+  // lightbox
+  var items=[].slice.call(document.querySelectorAll('#gal button')), lb=document.getElementById('lb'), li=document.getElementById('lb-img'), cur=0, last=null;
+  function show(i){ cur=(i+items.length)%items.length; var im=items[cur].querySelector('img'); li.src=im.src; li.alt=im.alt; }
+  function close(){ lb.hidden=true; document.body.style.overflow=''; if(last) last.focus(); }
+  items.forEach(function(x,i){ x.addEventListener('click',function(){ last=x; show(i); lb.hidden=false; document.body.style.overflow='hidden'; lb.querySelector('.x').focus(); }); });
+  lb.querySelector('.x').addEventListener('click',close);
+  lb.querySelector('.prev').addEventListener('click',function(){ show(cur-1); });
+  lb.querySelector('.next').addEventListener('click',function(){ show(cur+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(lb.hidden) return; if(e.key==='Escape') close(); if(e.key==='ArrowLeft') show(cur-1); if(e.key==='ArrowRight') show(cur+1); });
+  var sx=null; lb.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; },{passive:true});
+  lb.addEventListener('touchend',function(e){ if(sx===null) return; var dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40) show(cur+(dx<0?1:-1)); sx=null; });
+
+  // events: live from Google Sheet
+  var EVENTS_URL='https://script.google.com/macros/s/AKfycbxB0bZ6ldhJqT4i2jLe7t70zaQtPOmI_nH_SXsP0cOsEQUx2olWFGMRzpC4EIg4qM0W/exec';
+  var list=document.getElementById('ev-list');
+  var MONTHS=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function esc(t){ var d=document.createElement('div'); d.textContent=t==null?'':String(t); return d.innerHTML; }
+  function time12(t){ var m=/^(\d{1,2}):(\d{2})/.exec(t||''); if(!m) return ''; var h=+m[1], ap=h>=12?'PM':'AM'; h=h%12||12; return h+':'+m[2]+' '+ap; }
+  function render(events){
+    if(!events.length){ list.innerHTML='<p class="ev-empty">No upcoming events yet. Be the first to host one.</p>'; return; }
+    list.innerHTML=events.map(function(e){
+      var p=e.date.split('-'), d=new Date(+p[0],+p[1]-1,+p[2]);
+      return '<div class="ev"><div class="d"><b>'+(+p[2])+'</b>'+MONTHS[+p[1]-1]+'</div><div><h3>'+esc(e.title)+'</h3><p>'+DAYS[d.getDay()]+' · '+esc(time12(e.time))+(e.description?' · '+esc(e.description):'')+'</p>'+(e.organizer?'<p class="who">Hosted by '+esc(e.organizer)+'</p>':'')+'</div></div>';
+    }).join('');
+  }
+  fetch(EVENTS_URL).then(function(r){ return r.json(); }).then(function(j){ render((j&&j.events)||[]); })
+    .catch(function(){ list.innerHTML='<p class="ev-empty">Events couldn\'t load right now. Ask us on WhatsApp what\'s coming up.</p>'; });
+
+  var f=document.getElementById('event-form'), msg=document.getElementById('ev-msg'), send=document.getElementById('ev-send');
+  try{ var t=new Date(); f.date.min=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'); }catch(e){}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=[].slice.call(f.querySelectorAll('[required]')).filter(function(i){ return !i.value.trim(); });
+    msg.hidden=false;
+    if(bad.length){ msg.textContent='Please fill in every field, then send again.'; bad[0].focus(); return; }
+    if(!/^\S+@\S+\.\S+$/.test(f.email.value)){ msg.textContent='That email address looks incomplete. Check it and send again.'; f.email.focus(); return; }
+    var data={name:f.name.value,email:f.email.value,whatsapp:f.whatsapp.value,title:f.title.value,date:f.date.value,time:f.time.value,description:f.description.value,website:f.website.value};
+    send.disabled=true; send.textContent='Sending…'; msg.textContent='Sending your request…';
+    fetch(EVENTS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(j&&j.ok){ msg.textContent='Thanks! "'+data.title+'" was sent. The manager will review it and reply on WhatsApp.'; f.reset(); }
+        else { msg.textContent=(j&&j.error)||'Something went wrong. Please try again.'; }
+      })
+      .catch(function(){ msg.textContent='Your request couldn\'t be sent. Check your connection and try again, or message us on WhatsApp.'; })
+      .then(function(){ send.disabled=false; send.textContent='Send for approval'; });
+  });
+})();
+</script>
+</body>
+</html>
